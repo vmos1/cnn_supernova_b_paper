@@ -1,25 +1,26 @@
 # Description
 
-This folder contains files to run inference on the best CNN models.
+This folder contains files to run inference with a stored CNN model on a new dataset.
 The notebook `Model_inference.ipynb` performs the model inference.
-The notebook `Analyze_models.ipynb` plots ROC curves for models.
 
-## Input data
-The input data needs to be in the following form: 
-- Three `.npy` files of the form '<prefix>_idx.npy','<prefix>_x.npy', '<prefix>_y.npy' 
-corresponding to sample indices, sample images and sample labels.
-For example, 'full_idx.npy','full_x.npy', 'full_y.npy'.
-These need to be specified in the code using `data_dir` and `prefix'.
+## Running inference
+The main script to run inference is ``Run_inference.py``. 
+The script can be run inside a conda environment or by importing a suitable module containing keras.
+A sample script for running the code on cori is provided in `run_script.sh`. 
+It requires 3 arguments: 
 
-The code requires a saved model file of the type `model1.h5` and a history file `history_1.pickle`
+- Stored model file:
+This should be one of the best stored models, for example ``model_1.h5``.
 
-## Results 
-Inference results are stored in the folder `results_dir`
+- Input file with image samples:
+The input data needs to be a single *.npy* file in the format (num_samples,51,51,3). It is obtained as follows:
+  - The input images are obtained from the raw DES-SN data .gif files. The three types of images : temp,srch,diff are combined into a single file with 3 channels 
+  - These are then normalized.
 
-The results contain 3 files:
-1. `id_test_<model_number>.test` : The labels of the original samples.
-2. `ypred_<model_number.test>`: The predictions for each sample.
-3. `ytest_<model_number.test>`: The original sample predictions (for easy comparison).
+A sample dataset is provided in the folder *sample_test_data*.
+
+- Folder to store the inference results
+The results of inference are stored in a single file ``ypred.txt``, placed inside the provided folder.
 
 
 
