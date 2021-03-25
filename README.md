@@ -6,7 +6,7 @@ This repository contains codes used to run training and inference of 2D layered 
 The actual data used for training can be obtained using the information in https://portal.nersc.gov/project/dessn/autoscan/
 
 # Running Inference
-To run inference on the best CNN model, use the code in the folder `model_inference/Model_inference.ipynb`.
+To run inference on the best CNN model, use the code in the folder `model_inference/Run_inference.py`.
 For further info see the README file `model_inference/README.md`.
 The best CNN model is stored at https://portal.nersc.gov/project/m3363/vayyar_des_cnn/.
 
