@@ -14,8 +14,7 @@ This should be one of the best stored models, for example ``model_1.h5``.
 
 - Input file with image samples:
 The input data needs to be a single *.npy* file in the format (num_samples,51,51,3). It is obtained as follows:
-  - The input images are obtained from the raw DES-SN data .gif files. The three types of images : temp,srch,diff are combined into a single file with 3 channels 
-  - These are then normalized.
+  - The input images are obtained from the raw DES-SN data .gif files. The three types of images : temp,srch,diff are combined into a single file with 3 channels.
 
 A sample dataset is provided in the folder *sample_test_data*.
 
