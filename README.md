@@ -12,7 +12,11 @@ The best CNN model is stored at https://portal.nersc.gov/project/m3363/vayyar_de
 
 # Training new models
 New models can be trained using the code in the folder `train_code/`. The model architecture is defined in the file `models.py`.
-
+## Training input data
+Need 3 types of files:
+1. `Input x`: This is a 4D numpy array of shape (num_samples, xsize, ysize, num_chanels=3). The three channels correspond to the three types of files search, temp, diff.
+2. `Input y`: This is a 1D numpy array storing the actual label 0 or 1 (The convention used is 0=Non-artifact, 1=Artifact).
+3. `Input idx`: This is a 1D numpy array storing sample ID (integer between 0 - num_samples ) in dataset.
 # Conda environment
 The easiest way to run these codes is using conda environments. To build the conda environment use the files in ther folder
 `conda_env/`. The file `conda_env/environment.yml` can be used to build the environment. The file `conda_env/additional.txt` contains additional packages that need to be manually installed inside the conda environment.
