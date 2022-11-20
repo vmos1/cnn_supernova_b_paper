@@ -1,6 +1,6 @@
 
 # Introduction
-This repository contains codes for the paper: [PASP, VOL134, No. 1039, 2022](https://doi.org/10.1088/1538-3873/ac8375). These can be used to run training and inference of 2D layered CNNs for performing classification on supernova data (Artifact vs non-artifact).
+This repository contains codes for the paper: [2022 PASP 134 094501](https://doi.org/10.1088/1538-3873/ac8375). These can be used to run training and inference of 2D layered CNNs for performing classification on supernova data (Artifact vs non-artifact).
 
 # Dataset
 The actual data used for training can be obtained using the information in https://portal.nersc.gov/project/dessn/autoscan/
